@@ -85,7 +85,6 @@ Note how Bookdown has done the following for us:
 
 - Added previous/next/up navigation on each page
 
-
 ## Hierarchy
 
 TBD.
@@ -93,4 +92,3 @@ TBD.
 ## Publishing
 
 To publish the generated content, use `git add` and `git commit` on the various Markdown, JSON, and HTML files we have created, then push them to their origin. If the origin is Github Pages, then Github will automatically serve them for you.
-
