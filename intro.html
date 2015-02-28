@@ -67,7 +67,7 @@ composer create-project -s dev bookdown/project _bookdown/
 </code></pre>
 <p>You should see some output logs indicating file reading and creation. The HTML will be generated at the root of <code>{$REPO}</code>, not in the <code>_bookdown</code> subdirectory.  You should see two files, <code>index.html</code> and <code>example.html</code>.</p>
 <p>To browse these files, start the built-in PHP server on <code>localhost:8080</code> (or some other port) and then use a web client to review them.</p>
-<pre><code>php -S localhost:8080 {$REPO}
+<pre><code>php -S localhost:8080 -t {$REPO}
 </code></pre>
 <p>Be sure to terminate the server when done.</p>
 

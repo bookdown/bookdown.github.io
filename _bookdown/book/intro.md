@@ -56,6 +56,6 @@ You should see some output logs indicating file reading and creation. The HTML w
 
 To browse these files, start the built-in PHP server on `localhost:8080` (or some other port) and then use a web client to review them.
 
-    php -S localhost:8080 {$REPO}
+    php -S localhost:8080 -t {$REPO}
 
 Be sure to terminate the server when done.
