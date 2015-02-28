@@ -1,0 +1,12 @@
+{
+    "title": "Bookdown",
+    "content": {
+        "intro": "intro.md",
+        "basic": "basic.md",
+        "advanced": "advanced.md"
+    },
+    "target": "../../",
+    "templates": {
+        "head": "../templates/head.php"
+    }
+}
