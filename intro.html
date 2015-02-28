@@ -18,13 +18,10 @@
 </nav>
 <h1 id="1">1. Introduction</h1>
 <h2 id="1.1">1.1. What Is Bookdown?</h2>
-<p>Bookdown generates <a href="http://docbook.org">DocBook</a>-like HTML output using Markdown and JSON files instead of XML markup.</p>
+<p>Bookdown generates <a href="http://docbook.org">DocBook</a>-like HTML output using <a href="http://daringfireball.net/projects/markdown/">Markdown</a> and JSON files instead of XML.</p>
 <p>Bookdown is especially well-suited for publishing project documentation to GitHub Pages.</p>
 <p>Features include:</p>
 <ul>
-<li>
-<p>Multi-page hierarchical output</p>
-</li>
 <li>
 <p>Automatic table-of-contents generation as index pages at each hierarchy level</p>
 </li>
@@ -33,6 +30,12 @@
 </li>
 <li>
 <p>Automatic numbering of page headings</p>
+</li>
+<li>
+<p>Automatic previous/next/up navigation headers and footers</p>
+</li>
+<li>
+<p>Multi-page hierarchical output</p>
 </li>
 <li>
 <p>Loading of remote content files via HTTP</p>
@@ -45,8 +48,28 @@
 </li>
 </ul>
 <p>Bookdown can be used as a static site generator, or as a way to publish static pages as a subdirectory in an existing site.</p>
-<h2 id="1.2">1.2. Installation</h2>
-<p>(instructions)</p>
+<h2 id="1.2">1.2. Getting Started</h2>
+<h3 id="1.2.1">1.2.1. Prerequisites</h3>
+<p>Bookdown uses <a href="http://php.net">PHP</a>; it runs on PHP 5.3, but we recommend using the latest available version.</p>
+<h3 id="1.2.2">1.2.2. Installation</h3>
+<p>First, choose an existing project directory, likely a Git repository. We will call this the <code>{$REPO}</code> directory.</p>
+<p>Next, use <a href="http://getcomposer.org">Composer</a> to install a Bookdown skeleton as a subdirectory inside <code>{$REPO}</code>. We suggest <code>_bookdown/</code> since Github Pages will not publish underscore-prefixed paths.</p>
+<pre><code>cd {$REPO}
+composer create-project -s dev bookdown/project _bookdown/
+</code></pre>
+<p>You may wish to add the following lines to <code>{$REPO}/.gitignore</code> so that the underlying libraries are not committed to your main repository.</p>
+<pre><code>/_bookdown/vendor
+</code></pre>
+<h3 id="1.2.3">1.2.3. Confirming Installation</h3>
+<p>The Bookdown skeleton includes an example to confirm that installation succeeded.  Change into the skeleton directory, then issue the <code>bookdown</code> command to generate the example files:</p>
+<pre><code>cd _bookdown/
+./vendor/bin/bookdown book/bookdown.json
+</code></pre>
+<p>You should see some output logs indicating file reading and creation. The HTML will be generated at the root of <code>{$REPO}</code>, not in the <code>_bookdown</code> subdirectory.  You should see two files, <code>index.html</code> and <code>example.html</code>.</p>
+<p>To browse these files, start the built-in PHP server on <code>localhost:8080</code> (or some other port) and then use a web client to review them.</p>
+<pre><code>php -S localhost:8080 {$REPO}
+</code></pre>
+<p>Be sure to terminate the server when done.</p>
 
 <nav class="navfooter">
     <table width="100%">
