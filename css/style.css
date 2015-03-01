@@ -1,0 +1,13 @@
+pre {
+    border: 1px solid #ccc;
+    margin: 1em;
+    padding: 1em;
+    background: #eee;
+}
+
+blockquote {
+    margin: 0.5em 1em;
+    padding: 0.5em 1em;
+    background: #eee;
+    font-style: italic;
+}

@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Remote Content</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body>
+
+<nav class="navheader">
+    <table width="100%">
+        <tr>
+            <th colspan="3" align="center">3.1. Remote Content</th>
+        </tr>
+        <tr>
+            <td width="20%" align="left"><a href="/advanced/">Advanced Topics</a></td>
+            <td width="60%" align="center">3. Advanced Topics</th>
+            <td width="20%" align="right"><a href="/advanced/styles.html">Adding CSS Files</a></td>
+        </tr>
+    </table>
+</nav>
+<h1 id="3.1">3.1. Remote Content</h1>
+<p>You can specify remote Markdown and <code>bookdown.json</code> config files as <code>"content"</code> elements. This means you can collect pages and sections from various sources, where those pages and sections are maintained by their respective authors, and combine them into a single book.</p>
+<blockquote>
+<p>This requires that the <code>allow_url_fopen</code> setting in <code>php.ini</code> is enabled.</p>
+</blockquote>
+<p>For an example of adding remote content, try setting the following <code>"content"</code> value:</p>
+<pre><code>"content": {
+    "aura-libraries": https://raw.githubusercontent.com/pmjones/bookdown-demo/master/libraries/_bookdown.json
+}
+</code></pre>
+<p>Then <a href="../basic/generating-html.html">generate the book</a>. You will see that Bookdown retrieves the remote content and generates it into local HTML files.</p>
+
+<nav class="navfooter">
+    <table width="100%">
+        <tr>
+            <td width="40%" align="left"><a href="/advanced/">Prev</a></td>
+            <td width="20%" align="center"><a href="/advanced/">Up</a></td>
+            <td width="40%" align="right"><a href="/advanced/styles.html">Next</a></td>
+        </tr>
+        <tr>
+            <td width="40%" align="left" valign="top">3. Advanced Topics</td>
+            <td width="20%" align="center" valign="top">3. Advanced Topics</td>
+            <td width="40%" align="right" valign="top">3.2. Adding CSS Files</td>
+        </tr>
+    </table>
+</nav>
+</body>
+</html>

@@ -1,9 +1,10 @@
 {
     "title": "Bookdown",
     "content": {
-        "intro": "intro.md",
-        "basic": "basic.md",
-        "advanced": "advanced.md"
+        "intro": "intro/bookdown.json",
+        "basic": "basic/bookdown.json",
+        "advanced": "advanced/bookdown.json",
+        "development": "development.md"
     },
     "target": "../../",
     "templates": {

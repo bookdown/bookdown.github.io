@@ -1,0 +1,8 @@
+{
+    "title": "Advanced Topics",
+    "content": {
+        "remote": "remote.md",
+        "styles": "styles.md",
+        "templates": "templates.md"
+    }
+}

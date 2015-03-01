@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title>Overview</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body>
+
+<nav class="navheader">
+    <table width="100%">
+        <tr>
+            <th colspan="3" align="center">2.1. Overview</th>
+        </tr>
+        <tr>
+            <td width="20%" align="left"><a href="/basic/">Basic Usage</a></td>
+            <td width="60%" align="center">2. Basic Usage</th>
+            <td width="20%" align="right"><a href="/basic/adding-content.html">Adding Content</a></td>
+        </tr>
+    </table>
+</nav>
+<h1 id="2.1">2.1. Overview</h1>
+<p>Now that we have a working Bookdown installation, let's create some content and generate HTML from it. We need to deal with two things: the <code>bookdown.json</code> config file, and our actual Markdown content files.</p>
+<h2 id="2.1.1">2.1.1. The bookdown.json Config File</h2>
+<p>The <code>bookdown.json</code> config file controls the title of our table-of-contents index pages, and the content to be used for HTML generation. A <code>bookdown.json</code> config file looks like this:</p>
+<pre><code>{
+    "title": "My Title",
+    "content": {
+        "pagename": "some-markdown-page.md",
+        "dirname": "subdir/bookdown.json"
+    }
+}
+</code></pre>
+<p>The <code>"title"</code> string determines the heading that will be used for the table-of-contents entry for the listed content.</p>
+<p>The <code>"content"</code> object is composed of key-value pairs, each indicating either:</p>
+<ul>
+<li>
+<p>the name of a page to generate (<code>.html</code> will be appended automatically) and the Markdown file to use as its source; or,</p>
+</li>
+<li>
+<p>the name of a subdirectory to generate using the content listed in another <code>bookdown.json</code> file.  (As long as the path ends in <code>bookdown.json</code> it will be treated as Bookdown config file.)</p>
+</li>
+</ul>
+<blockquote>
+<p>N.b.: The top-level <code>bookdown.json</code> has other elements that control book generation; we can ignore these for now.</p>
+</blockquote>
+<p>The <code>"content"</code> values may point to:</p>
+<ul>
+<li>
+<p>an absolute file path (with a leading directory separator)</p>
+</li>
+<li>
+<p>a file path relative to the <code>bookdown.json</code> file (no leading directory separator)</p>
+</li>
+<li>
+<p>a remote path, such as <code>http://example.com/path/to/page.md</code> or <code>http://example.com/path/to/bookdown.json</code></p>
+</li>
+</ul>
+<blockquote>
+<p>N.b.: The use of remote paths makes it possible to collect content from many different sources into a single book.</p>
+</blockquote>
+<h2 id="2.1.2">2.1.2. Markdown Content Files</h2>
+<p>Bookdown uses <a href="http://commonmark.org">CommonMark</a> Markdown as its default markup. (Advanced users may write other conversion processes to use other markups.)  This means that standard Markdown content is already suitable for use with Bookdown.</p>
+
+<nav class="navfooter">
+    <table width="100%">
+        <tr>
+            <td width="40%" align="left"><a href="/basic/">Prev</a></td>
+            <td width="20%" align="center"><a href="/basic/">Up</a></td>
+            <td width="40%" align="right"><a href="/basic/adding-content.html">Next</a></td>
+        </tr>
+        <tr>
+            <td width="40%" align="left" valign="top">2. Basic Usage</td>
+            <td width="20%" align="center" valign="top">2. Basic Usage</td>
+            <td width="40%" align="right" valign="top">2.2. Adding Content</td>
+        </tr>
+    </table>
+</nav>
+</body>
+</html>

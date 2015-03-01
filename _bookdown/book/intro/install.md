@@ -1,38 +1,10 @@
-# Introduction
+# Getting Started
 
-## What Is Bookdown?
-
-Bookdown generates [DocBook](http://docbook.org)-like HTML output using [Markdown](http://daringfireball.net/projects/markdown/) and JSON files instead of XML.
-
-Bookdown is especially well-suited for publishing project documentation to GitHub Pages.
-
-Features include:
-
-- Automatic table-of-contents generation as index pages at each hierarchy level
-
-- Custom index-page titles via JSON configuration
-
-- Automatic numbering of page headings
-
-- Automatic previous/next/up navigation headers and footers
-
-- Multi-page hierarchical output
-
-- Loading of remote content files via HTTP
-
-- Templated output for theming
-
-- Overridable page processing, especially for rendering
-
-Bookdown can be used as a static site generator, or as a way to publish static pages as a subdirectory in an existing site.
-
-## Getting Started
-
-### Prerequisites
+## Prerequisites
 
 Bookdown uses [PHP](http://php.net). It runs on PHP 5.4, but we recommend using the latest available version.
 
-### Installation
+## Installation
 
 First, choose an existing project directory, likely a Git repository. We will call this the `{$REPO}` directory.
 
@@ -45,7 +17,7 @@ You may wish to add the following lines to `{$REPO}/.gitignore` so that the unde
 
     /_bookdown/vendor
 
-### Confirming Installation
+## Confirming Installation
 
 The Bookdown skeleton includes an example to confirm that installation succeeded.  Change into the skeleton directory, then issue the `bookdown` command to generate the example files:
 

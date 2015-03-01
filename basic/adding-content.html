@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Adding Content</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body>
+
+<nav class="navheader">
+    <table width="100%">
+        <tr>
+            <th colspan="3" align="center">2.2. Adding Content</th>
+        </tr>
+        <tr>
+            <td width="20%" align="left"><a href="/basic/overview.html">Overview</a></td>
+            <td width="60%" align="center">2. Basic Usage</th>
+            <td width="20%" align="right"><a href="/basic/generating-html.html">Generating HTML</a></td>
+        </tr>
+    </table>
+</nav>
+<h1 id="2.2">2.2. Adding Content</h1>
+<h2 id="2.2.1">2.2.1. Local Page Files</h2>
+<p>Let's add a page to the existing example book. Use your favorite editor to create and craeate a file called <code>new-page.md</code> at <code>{$REPO}/_bookdown/book</code>. Add the following text to that file, and save when done:</p>
+<pre><code># My New Page
+
+Now is the time for all good men to come to the aid of their country.
+
+## Dogs and Foxes
+
+The quick brown fox jumps over the lazy dog.
+</code></pre>
+<p>It's not enough to create the file, though. We need to tell Bookdown that it exists, and what order it takes in our book.  To do so, edit the <code>bookdown.json</code> file and add a new <code>"content"</code> element:</p>
+<pre><code>    "content": {
+        "example": "example.md",
+        "another": "new-page.md"
+    },
+</code></pre>
+<p>Note that the Markdown file name does not have to match the HTML file name that will be generated.  The <code>new-page.md</code> file will be transformed into <code>another.html</code> at generation time.</p>
+<h2 id="2.2.2">2.2.2. Hierarchical Content</h2>
+<p>In addition, you can specify another <code>bookdown.json</code> config file as a <code>"content"</code> element. When you do so, Bookdown will read that config file and treat its content as pages in a subsection. This allows you to structure books of any depth you like. For an example, review <a href="https://github.com/bookdown/bookdown.github.io/tree/master/_bookdown/book">the files that produce this very site</a>.</p>
+
+<nav class="navfooter">
+    <table width="100%">
+        <tr>
+            <td width="40%" align="left"><a href="/basic/overview.html">Prev</a></td>
+            <td width="20%" align="center"><a href="/basic/">Up</a></td>
+            <td width="40%" align="right"><a href="/basic/generating-html.html">Next</a></td>
+        </tr>
+        <tr>
+            <td width="40%" align="left" valign="top">2.1. Overview</td>
+            <td width="20%" align="center" valign="top">2. Basic Usage</td>
+            <td width="40%" align="right" valign="top">2.3. Generating HTML</td>
+        </tr>
+    </table>
+</nav>
+</body>
+</html>
