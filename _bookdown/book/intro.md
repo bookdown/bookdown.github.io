@@ -30,7 +30,7 @@ Bookdown can be used as a static site generator, or as a way to publish static p
 
 ### Prerequisites
 
-Bookdown uses [PHP](http://php.net); it runs on PHP 5.3, but we recommend using the latest available version.
+Bookdown uses [PHP](http://php.net). It runs on PHP 5.4, but we recommend using the latest available version.
 
 ### Installation
 
