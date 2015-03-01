@@ -7,7 +7,7 @@ You can specify remote Markdown and `bookdown.json` config files as `"content"` 
 For an example of adding remote content, try setting the following `"content"` value:
 
     "content": {
-        "aura-libraries": https://raw.githubusercontent.com/pmjones/bookdown-demo/master/libraries/_bookdown.json
+        "aura-libraries": "https://raw.githubusercontent.com/pmjones/bookdown-demo/master/libraries/_bookdown.json"
     }
 
 Then [generate the book](../basic/generating-html.html). You will see that Bookdown retrieves the remote content and generates it into local HTML files.

@@ -2,7 +2,7 @@
 
 By default, Bookdown does not come with any CSS files. The HTML output is functional, but not particularly stylish.
 
-To add CSS styles:
+To add CSS files:
 
 1. Place `.css` files of your choosing somewhere the `"target"` directory.
 
@@ -23,7 +23,9 @@ Next, copy the following stylesheet to the `css/` subdirectory as `style.css`:
         font-family: sans-serif;
     }
 
-Then edit the `head.php` override template to add a link to the stylesheet. The file will look something like this:
+Then edit the `{$REPO}/_bookdown/templates/head.php` [override template](./templates.html) file to add a link to the stylesheet.
+
+The file will end up looking something like this:
 
     <head>
         <title><?php echo $this->page->getTitle(); ?></title>

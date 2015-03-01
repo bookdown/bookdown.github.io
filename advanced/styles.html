@@ -13,13 +13,13 @@
         <tr>
             <td width="20%" align="left"><a href="/advanced/remote.html">Remote Content</a></td>
             <td width="60%" align="center">3. Advanced Topics</th>
-            <td width="20%" align="right"><a href="/advanced/templates.html">Templates</a></td>
+            <td width="20%" align="right"><a href="/advanced/templates.html">Rendering</a></td>
         </tr>
     </table>
 </nav>
 <h1 id="3.2">3.2. Adding CSS Files</h1>
 <p>By default, Bookdown does not come with any CSS files. The HTML output is functional, but not particularly stylish.</p>
-<p>To add CSS styles:</p>
+<p>To add CSS files:</p>
 <ol>
 <li>
 <p>Place <code>.css</code> files of your choosing somewhere the <code>"target"</code> directory.</p>
@@ -41,7 +41,8 @@ mkdir css
     font-family: sans-serif;
 }
 </code></pre>
-<p>Then edit the <code>head.php</code> override template to add a link to the stylesheet. The file will look something like this:</p>
+<p>Then edit the <code>{$REPO}/_bookdown/templates/head.php</code> <a href="./templates.html">override template</a> file to add a link to the stylesheet.</p>
+<p>The file will end up looking something like this:</p>
 <pre><code>&lt;head&gt;
     &lt;title&gt;&lt;?php echo $this-&gt;page-&gt;getTitle(); ?&gt;&lt;/title&gt;
     &lt;link rel="stylesheet" type="text/css" href="/css/style.css" /&gt;
@@ -63,7 +64,7 @@ mkdir css
         <tr>
             <td width="40%" align="left" valign="top">3.1. Remote Content</td>
             <td width="20%" align="center" valign="top">3. Advanced Topics</td>
-            <td width="40%" align="right" valign="top">3.3. Templates</td>
+            <td width="40%" align="right" valign="top">3.3. Rendering</td>
         </tr>
     </table>
 </nav>

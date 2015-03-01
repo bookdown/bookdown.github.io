@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Templates</title>
+    <title>Rendering</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
 </head>
 <body>
@@ -8,7 +8,7 @@
 <nav class="navheader">
     <table width="100%">
         <tr>
-            <th colspan="3" align="center">3.3. Templates</th>
+            <th colspan="3" align="center">3.3. Rendering</th>
         </tr>
         <tr>
             <td width="20%" align="left"><a href="/advanced/styles.html">Adding CSS Files</a></td>
@@ -17,8 +17,48 @@
         </tr>
     </table>
 </nav>
-<h1 id="3.3">3.3. Templates</h1>
-<p>Control the output more directly.</p>
+<h1 id="3.3">3.3. Rendering</h1>
+<p>Bookdown runs plain-PHP templates through <a href="https://github.com/auraphp/Aura.View">Aura.View</a>, using <a href="https://github.com/auraphp/Aura.Html">Aura.Html</a> helpers, to render HTML pages.</p>
+<p>The default templates are located in the core Bookdown library; you can see them at <code>{$REPO}/_bookdown/vendor/bookdown/bookdown/templates/</code>. The project-specific override templates are located in the <code>{$REPO}/_bookdown/templates</code> directory.</p>
+<h2 id="3.3.1">3.3.1. Overriding The Default Templates</h2>
+<p>You can override the default templates individiually or entirely to control Bookdown output. To do so:</p>
+<ol>
+<li>
+<p>Copy the template you want to override from <code>{$REPO}/_bookdown/vendor/bookdown/bookdown/templates/</code> to <code>{$REPO}/_bookdown/templates</code>.</p>
+</li>
+<li>
+<p>Modify the project-specific <code>main.php</code> template to point to the override version.</p>
+</li>
+<li>
+<p>Edit the override template as you see fit.</p>
+</li>
+<li>
+<p>Regenerate the HTML.</p>
+</li>
+</ol>
+<p>For example, let's modify the <code>navheader.php</code> template.</p>
+<p>First, we copy the default template to the project-specific template location:</p>
+<pre><code>cd {$REPO}/_bookdown
+cp vendor/bookdown/templates/navheader.php templates/navheader.php
+</code></pre>
+<p>Next, we open the project-specific copy of <code>main.php</code> and point to the new <code>navheader.php</code> location. Change the line that reads ...</p>
+<pre><code>$templates-&gt;set("navheader", "{$library}/navheader.php");
+</code></pre>
+<p>... to:</p>
+<pre><code>$templates-&gt;set("navheader", "{$project}/navheader.php");
+</code></pre>
+<p>(Note that <code>$library</code> and <code>$project</code> are defined at the top of <code>main.php</code>.)</p>
+<p>Then we edit the <code>navheader.php</code> template and change it to whatever we like. Try something obvious, like replacing all the HTML and PHP code with <code>&lt;p&gt;HI THERE&lt;/p&gt;</code>.</p>
+<p>Finally, regenerate the HTML. You should see <code>HI THERE</code> at the top of every page, but no navigation elements at all.</p>
+<h2 id="3.3.2">3.3.2. Choosing A Different Master Template</h2>
+<p>If you like, you can point Bookdown to a completely different master template. In the root <code>bookdown.json</code> config file, specify a <code>"template"</code> value as the path to your new master PHP template:</p>
+<pre><code>{
+    ...
+    "template": "../my-master.php"
+}
+</code></pre>
+<p>That template will be passed through an Aura.View instance.</p>
+<p>You can also completely rewrite the existing <code>templates/main.php</code> template to whatever you like.</p>
 
 <nav class="navfooter">
     <table width="100%">
