@@ -1,7 +1,10 @@
 <html>
 <head>
     <title>Rendering</title>
+
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/nav.css" />
+
     <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
@@ -25,12 +28,12 @@
 <nav class="navheader">
     <table width="100%">
         <tr>
-            <th colspan="3" align="center">3.3. Rendering</th>
+            <th colspan="3" class="curr">3.3. Rendering</th>
         </tr>
         <tr>
-            <td width="20%" align="left"><a href="/advanced/styles.html">Adding CSS Files</a></td>
-            <td width="60%" align="center">3. Advanced Topics</th>
-            <td width="20%" align="right"><a href="/development.html">Development</a></td>
+            <td width="20%" class="prev"><a href="/advanced/styles.html">Adding CSS Files</a></td>
+            <td width="60%" class="parent" align="center">3. Advanced Topics</th>
+            <td width="20%" class="next" align="right"><a href="/development.html">Development</a></td>
         </tr>
     </table>
 </nav>
@@ -80,14 +83,14 @@ cp vendor/bookdown/templates/navheader.php templates/navheader.php
 <nav class="navfooter">
     <table width="100%">
         <tr>
-            <td width="40%" align="left"><a href="/advanced/styles.html">Prev</a></td>
-            <td width="20%" align="center"><a href="/advanced/">Up</a></td>
-            <td width="40%" align="right"><a href="/development.html">Next</a></td>
+            <td width="40%" class="prev"><a href="/advanced/styles.html">Prev</a></td>
+            <td width="20%" class="parent"><a href="/advanced/">Up</a></td>
+            <td width="40%" class="next"><a href="/development.html">Next</a></td>
         </tr>
         <tr>
-            <td width="40%" align="left" valign="top">3.2. Adding CSS Files</td>
-            <td width="20%" align="center" valign="top">3. Advanced Topics</td>
-            <td width="40%" align="right" valign="top">4. Development</td>
+            <td width="40%" class="prev">3.2. Adding CSS Files</td>
+            <td width="20%" class="parent">3. Advanced Topics</td>
+            <td width="40%" class="next">4. Development</td>
         </tr>
     </table>
 </nav>
