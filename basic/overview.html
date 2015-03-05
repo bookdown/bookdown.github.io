@@ -38,31 +38,37 @@
     </table>
 </nav>
 <h1 id="2.1">2.1. Overview</h1>
-<p>Now that we have a working Bookdown installation, let's create some content and generate HTML from it. We need to deal with two things: the <code>bookdown.json</code> config file, and our actual Markdown content files.</p>
-<h2 id="2.1.1">2.1.1. The bookdown.json Config File</h2>
-<p>The <code>bookdown.json</code> config file controls the title of our table-of-contents index pages, and the content to be used for HTML generation. A <code>bookdown.json</code> config file looks like this:</p>
+<p>Now that we have a working Bookdown installation, let's create some content and generate HTML from it. We need to deal with two things: our actual Markdown content files, and a <code>bookdown.json</code> config file to organize them.</p>
+<h2 id="2.1.1">2.1.1. Markdown Content Files</h2>
+<p>Bookdown uses <a href="http://commonmark.org">CommonMark</a> Markdown as its default markup. (Advanced users may write other conversion processes to use other markups.)  This means that standard Markdown content is already suitable for use with Bookdown.</p>
+<h2 id="2.1.2">2.1.2. The bookdown.json Config File</h2>
+<p>The <code>bookdown.json</code> config file controls the title of our table-of-contents index page, and the content to be used for HTML generation. A <code>bookdown.json</code> config file looks like this:</p>
 <pre><code>{
     "title": "My Title",
-    "content": {
-        "pagename": "some-markdown-page.md",
-        "dirname": "subdir/bookdown.json"
-    }
+    "content": [
+        "page.md",
+        "section/bookdown.json"
+    ]
 }
 </code></pre>
-<p>The <code>"title"</code> string determines the heading that will be used for the table-of-contents entry for the listed content.</p>
-<p>The <code>"content"</code> object is composed of key-value pairs, each indicating either:</p>
-<ul>
-<li>
-<p>the name of a page to generate (<code>.html</code> will be appended automatically) and the Markdown file to use as its source; or,</p>
-</li>
-<li>
-<p>the name of a subdirectory to generate using the content listed in another <code>bookdown.json</code> file.  (As long as the path ends in <code>bookdown.json</code> it will be treated as Bookdown config file.)</p>
-</li>
-</ul>
 <blockquote>
 <p>N.b.: The top-level <code>bookdown.json</code> has other elements that control book generation; we can ignore these for now.</p>
 </blockquote>
-<p>The <code>"content"</code> values may point to:</p>
+<h3 id="2.1.2.1">2.1.2.1. Title String</h3>
+<p>The <code>"title"</code> string determines the heading that will be used for the table-of-contents entry for the listed content.</p>
+<h3 id="2.1.2.2">2.1.2.2. Content Array</h3>
+<p>The <code>"content"</code> array specifies the order of pages, and the origins of those pages.</p>
+<h4 id="2.1.2.2.1">2.1.2.2.1. Content String Elements</h4>
+<p>Each content array element is an origin string. It determines both where the content is located, and the target name when rendering it into HTML.</p>
+<ul>
+<li>
+<p>If the origin string ends in <code>bookdown.json</code>, the target name will the directory in which the <code>bookdown.json</code> file is stored, and the <code>"content"</code> in that <code>bookdown.json</code> file will be rendered into that directory.</p>
+</li>
+<li>
+<p>Otherwise, the target name is the same as the origin file name, minus any <code>.ext</code> file extension.</p>
+</li>
+</ul>
+<p>The origin strings may point to:</p>
 <ul>
 <li>
 <p>an absolute file path (with a leading directory separator)</p>
@@ -71,14 +77,34 @@
 <p>a file path relative to the <code>bookdown.json</code> file (no leading directory separator)</p>
 </li>
 <li>
-<p>a remote path, such as <code>http://example.com/path/to/page.md</code> or <code>http://example.com/path/to/bookdown.json</code></p>
+<p>a remote path, such as <code>http://example.com/path/to/page.md</code> or <code>http://example.com/section/bookdown.json</code></p>
 </li>
 </ul>
 <blockquote>
 <p>N.b.: The use of remote paths makes it possible to collect content from many different sources into a single book.</p>
 </blockquote>
-<h2 id="2.1.2">2.1.2. Markdown Content Files</h2>
-<p>Bookdown uses <a href="http://commonmark.org">CommonMark</a> Markdown as its default markup. (Advanced users may write other conversion processes to use other markups.)  This means that standard Markdown content is already suitable for use with Bookdown.</p>
+<h4 id="2.1.2.2.2">2.1.2.2.2. Content Object Elements</h4>
+<p>Sometimes you will want the target name to be different from the origin name. In these cases, the <code>"content"</code> element can be an object of a single key-value pair, where the key is the target name and the value is the origin.</p>
+<p>The following is equivalent to the above:</p>
+<pre><code>{
+    "title": "My Book",
+    "content": [
+        {"page": "page.md"},
+        {"section": "section/bookdown.json"}
+    ]
+}
+</code></pre>
+<p>The key (target name) can be any name you like, so the following uses the same origin files but sets different targets:</p>
+<pre><code>{
+    "title": "My Book",
+    "content": [
+        {"alternative-page-name": "page.md"},
+        {"alternative-section-name": "section/bookdown.json",
+    ]
+}
+</code></pre>
+<h4 id="2.1.2.2.3">2.1.2.2.3. No "index" Content Names</h4>
+<p>The target name <code>index</code> is reserved by Bookdown for table-of-contents pages. If you have an origin that will end up with an <code>index</code> target name, use a <code>"content"</code> object to rename it to something else.</p>
 
 <nav class="navfooter">
     <table>

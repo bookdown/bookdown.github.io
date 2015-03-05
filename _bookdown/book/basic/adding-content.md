@@ -14,9 +14,9 @@ Let's add a page to the existing example book. Use your favorite editor to creat
 
 It's not enough to create the file, though. We need to tell Bookdown that it exists, and what order it takes in our book.  To do so, edit the `bookdown.json` file and add a new `"content"` element:
 
-        "content": {
-            "example": "example.md",
-            "another": "new-page.md"
+        "content": [
+            "example.md",
+            {"another": "new-page.md"}
         },
 
 Note that the Markdown file name does not have to match the HTML file name that will be generated.  The `new-page.md` file will be transformed into `another.html` at generation time.

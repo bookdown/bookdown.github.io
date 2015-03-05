@@ -49,9 +49,9 @@ Now is the time for all good men to come to the aid of their country.
 The quick brown fox jumps over the lazy dog.
 </code></pre>
 <p>It's not enough to create the file, though. We need to tell Bookdown that it exists, and what order it takes in our book.  To do so, edit the <code>bookdown.json</code> file and add a new <code>"content"</code> element:</p>
-<pre><code>    "content": {
-        "example": "example.md",
-        "another": "new-page.md"
+<pre><code>    "content": [
+        "example.md",
+        {"another": "new-page.md"}
     },
 </code></pre>
 <p>Note that the Markdown file name does not have to match the HTML file name that will be generated.  The <code>new-page.md</code> file will be transformed into <code>another.html</code> at generation time.</p>

@@ -1,11 +1,11 @@
 {
-    "title": "Bookdown",
-    "content": {
-        "intro": "intro/bookdown.json",
-        "basic": "basic/bookdown.json",
-        "advanced": "advanced/bookdown.json",
-        "development": "development.md"
-    },
+    "title": "Bookdown 0.3.0",
+    "content": [
+        "intro/bookdown.json",
+        "basic/bookdown.json",
+        "advanced/bookdown.json",
+        "development.md"
+    ],
     "template": "../templates/main.php",
     "target": "../../"
 }

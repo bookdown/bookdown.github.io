@@ -1,7 +1,7 @@
 {
     "title": "Introduction",
-    "content": {
-        "what-is-bookdown": "about.md",
-        "getting-started": "install.md"
-    }
+    "content": [
+        "what-is-bookdown.md",
+        "getting-started.md"
+    ]
 }
