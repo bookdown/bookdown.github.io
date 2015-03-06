@@ -60,7 +60,7 @@
 <p>Now that we have a working Bookdown installation, let's create some content and generate HTML from it. We need to deal with two things: our actual Markdown content files, and a <code>bookdown.json</code> config file to organize them.</p>
 <h2 id="2.1.1">2.1.1. Markdown Content Files</h2>
 <p>Bookdown uses <a href="http://commonmark.org">CommonMark</a> Markdown as its default markup. (Advanced users may write other conversion processes to use other markups.)  This means that standard Markdown content is already suitable for use with Bookdown.</p>
-<h2 id="2.1.2">2.1.2. The bookdown.json Config File</h2>
+<h2 id="2.1.2">2.1.2. The <code>bookdown.json</code> Config File</h2>
 <p>The <code>bookdown.json</code> config file controls the title of our table-of-contents index page, and the content to be used for HTML generation. A <code>bookdown.json</code> config file looks like this:</p>
 <pre><code>{
     "title": "My Title",
@@ -122,7 +122,7 @@
     ]
 }
 </code></pre>
-<h4 id="2.1.2.2.3">2.1.2.2.3. No "index" Content Names</h4>
+<h4 id="2.1.2.2.3">2.1.2.2.3. No <code>"index"</code> Content Names</h4>
 <p>The target name <code>index</code> is reserved by Bookdown for table-of-contents pages. If you have an origin that will end up with an <code>index</code> target name, use a <code>"content"</code> object to rename it to something else.</p>
 
 <nav class="navfooter">
