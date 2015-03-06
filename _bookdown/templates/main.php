@@ -14,7 +14,15 @@ $templates->set("navheader", "{$library}/navheader.php");
 $templates->set("navfooter", "{$library}/navfooter.php");
 $templates->set("toc", "{$library}/toc.php");
 ?>
-<html>
+<html lang="en">
 <?php echo $this->render("head"); ?>
-<?php echo $this->render("body"); ?>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <?php echo $this->render("core"); ?>
+      </div>
+    </div>
+  </div>
+</body>
 </html>

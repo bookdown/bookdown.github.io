@@ -1,16 +1,10 @@
 nav table tr {
     border-top: none;
-    background-color: white;
     margin: 0;
     padding: 0;
 }
 
-nav table tr:nth-child(2n) {
-    background-color: white;
-}
-
 nav table tr th {
-    font-weight: bold;
     border: none;
     margin: 0;
     padding: 6px 13px;
@@ -34,6 +28,10 @@ nav table {
     width: 100%;
 }
 
+nav.navheader table {
+    border-bottom: 1px solid #E1E1E1;
+}
+
 nav.navheader td.curr,
 nav.navheader th.curr {
     text-align: center;
@@ -55,6 +53,10 @@ nav.navheader td.next,
 nav.navheader th.next {
     text-align: right;
     width: 30%;
+}
+
+nav.navfooter table {
+    border-top: 1px solid #E1E1E1;
 }
 
 nav.navfooter td.prev,
