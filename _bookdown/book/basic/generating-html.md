@@ -28,3 +28,9 @@ Note how Bookdown has done the following for us:
 - Linked to each heading from the table-of-contents
 
 - Added previous/next/up navigation on each page
+
+## Overriding The Target Value
+
+In some cases, you may find it necessary to temporarily override the `target` value from the top-level `bookdown.json` file. To do so, you can specify `--target=` when invoking the `bookdown` command:
+
+    ./vendor/bin/bookdown book/bookdown.json --target=../../other-dir/

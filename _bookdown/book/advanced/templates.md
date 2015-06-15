@@ -49,3 +49,9 @@ If you like, you can point Bookdown to a completely different master template. I
 That template will be passed through an Aura.View instance.
 
 You can also completely rewrite the existing `templates/main.php` template to whatever you like.
+
+## Overriding The Template Value
+
+In some cases, you may find it necessary to temporarily override the `template` value from the top-level `bookdown.json` file. To do so, you can specify `--template=` when invoking the `bookdown` command:
+
+    ./vendor/bin/bookdown book/bookdown.json --template=../../other-template.php
