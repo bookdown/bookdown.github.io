@@ -98,6 +98,10 @@ cp vendor/bookdown/templates/navheader.php templates/navheader.php
 </code></pre>
 <p>That template will be passed through an Aura.View instance.</p>
 <p>You can also completely rewrite the existing <code>templates/main.php</code> template to whatever you like.</p>
+<h2 id="3.3.3">3.3.3. Overriding The Template Value</h2>
+<p>In some cases, you may find it necessary to temporarily override the <code>template</code> value from the top-level <code>bookdown.json</code> file. To do so, you can specify <code>--template=</code> when invoking the <code>bookdown</code> command:</p>
+<pre><code>./vendor/bin/bookdown book/bookdown.json --template=../../other-template.php
+</code></pre>
 
 <nav class="navfooter">
     <table>
