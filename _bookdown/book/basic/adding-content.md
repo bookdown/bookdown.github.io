@@ -2,7 +2,7 @@
 
 ## Local Page Files
 
-Let's add a page to the existing example book. Use your favorite editor to create and craeate a file called `new-page.md` at `{$REPO}/_bookdown/book`. Add the following text to that file, and save when done:
+Let's add a page to the existing example book. Use your favorite editor to create a file called `new-page.md` at `{$REPO}/_bookdown/book`. Add the following text to that file, and save when done:
 
     # My New Page
 
