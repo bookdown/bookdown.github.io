@@ -22,4 +22,14 @@ Features include:
 
 - Overridable page processing, especially for rendering
 
+- Downloading of linked images
+
+- CommonMark extension support
+
+- Depth level of table of contents
+
+- Setting a copyright hint
+
+- Support for 3rd party templates
+
 Bookdown can be used as a static site generator, or as a way to publish static pages as a subdirectory in an existing site.
