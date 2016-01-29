@@ -2,6 +2,7 @@
     "title": "Advanced Topics",
     "content": [
         "remote.md",
+        "root-href.md",
         "styles.md",
         "templates.md",
         "page-entity.md"

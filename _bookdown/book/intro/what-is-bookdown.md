@@ -1,6 +1,6 @@
 # What Is Bookdown?
 
-Bookdown generates [DocBook](http://docbook.org)-like HTML output using [Markdown](http://daringfireball.net/projects/markdown/) and JSON files instead of XML.
+Bookdown generates [DocBook](http://docbook.org)-like HTML output using [CommonMark](http://commonmark.org) (a variation of Markdown) and JSON files instead of XML.
 
 Bookdown is especially well-suited for publishing project documentation to GitHub Pages.
 

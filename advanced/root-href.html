@@ -3,7 +3,7 @@
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title>Remote Content</title>
+    <title>Overriding The Root Href Value</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -47,38 +47,37 @@
 <nav class="navheader">
     <table>
         <tr>
-            <th colspan="3" class="curr">3.1. Remote Content</th>
+            <th colspan="3" class="curr">3.2. Overriding The Root Href Value</th>
         </tr>
         <tr>
-            <td class="prev"><a href="/advanced/">Advanced Topics</a></td>
+            <td class="prev"><a href="/advanced/remote.html">Remote Content</a></td>
             <td class="parent">3. Advanced Topics</th>
-            <td class="next"><a href="/advanced/root-href.html">Overriding The Root Href Value</a></td>
+            <td class="next"><a href="/advanced/styles.html">Adding CSS Files</a></td>
         </tr>
     </table>
 </nav>
-<h1 id="3.1">3.1. Remote Content</h1>
-<blockquote>
-<p>This requires the <code>allow_url_fopen</code> setting in <code>php.ini</code> to be enabled.</p>
-</blockquote>
-<p>You can specify remote Markdown and <code>bookdown.json</code> config files as <code>"content"</code> elements. This means you can collect pages and sections from various sources, where those pages and sections are maintained by their respective authors, and combine them into a single book.</p>
-<p>For an example of adding remote content, try setting the following <code>"content"</code> value:</p>
-<pre><code>"content": [
-    "https://raw.githubusercontent.com/pmjones/bookdown-demo/master/libraries/_bookdown.json"
-]
+<h1 id="3.2">3.2. Overriding The Root Href Value</h1>
+<p>By default, all navgation links between pages will be prefixed with <code>/</code>. Sometimes this will not be what you want; for example, if you are publishing your book to a subdirectory.</p>
+<p>If you want to use a different root href value, edit the top-level <code>bookdown.json</code> file and set the <code>rootHref</code> value like so:</p>
+<pre><code>{
+    ...
+    "rootHref": "/foo/",
+    ...
+}
 </code></pre>
-<p>Then <a href="../basic/generating-html.html">generate the book</a>. You will see that Bookdown retrieves the remote content and generates it into local HTML files.</p>
+<p>Then all navigation links will be prefixed with <code>/foo/</code> instead.</p>
 
 <nav class="navfooter">
     <table>
         <tr>
-            <td class="prev"><a href="/advanced/">Prev</a></td>
+            <td class="prev"><a href="/advanced/remote.html">Prev</a></td>
             <td class="parent"><a href="/advanced/">Up</a></td>
-            <td class="next"><a href="/advanced/root-href.html">Next</a></td>
+            <td class="next"><a href="/advanced/styles.html">Next</a></td>
         </tr>
         <tr>
-            <td class="prev">3. Advanced Topics</td>
+            <td class="prev">3.1. Remote Content</td>
             <td class="parent">3. Advanced Topics</td>
-            <td class="next">3.2. Overriding The Root Href Value</td>
+            <td class="next">3.3. Adding CSS Files</td>
         </tr>
     </table>
 </nav>
