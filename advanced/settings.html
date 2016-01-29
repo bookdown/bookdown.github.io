@@ -3,7 +3,7 @@
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title>Overriding The Root Href Value</title>
+    <title>Settings</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -47,7 +47,7 @@
 <nav class="navheader">
     <table>
         <tr>
-            <th colspan="3" class="curr">3.2. Overriding The Root Href Value</th>
+            <th colspan="3" class="curr">3.2. Settings</th>
         </tr>
         <tr>
             <td class="prev"><a href="/advanced/remote.html">Remote Content</a></td>
@@ -56,9 +56,10 @@
         </tr>
     </table>
 </nav>
-<h1 id="3.2">3.2. Overriding The Root Href Value</h1>
+<h1 id="3.2">3.2. Settings</h1>
+<h2 id="3.2.1">3.2.1. rootHref</h2>
 <p>By default, all navgation links between pages will be prefixed with <code>/</code>. Sometimes this will not be what you want; for example, if you are publishing your book to a subdirectory.</p>
-<p>If you want to use a different root href value, edit the top-level <code>bookdown.json</code> file and set the <code>rootHref</code> value like so:</p>
+<p>If you want to use a different root href value, edit the top-level <code>bookdown.json</code> file and set the <code>rootHref</code> value:</p>
 <pre><code>{
     ...
     "rootHref": "/foo/",
@@ -66,6 +67,16 @@
 }
 </code></pre>
 <p>Then all navigation links will be prefixed with <code>/foo/</code> instead.</p>
+<p>This value is honored only at the root-level <code>bookdown.json</code> file.</p>
+<h2 id="3.2.2">3.2.2. tocDepth</h2>
+<p>By default, the table of contents will show all content levels below it. You can limit the depth of the table of contents by setting the <code>tocDepth</code> value:</p>
+<pre><code>{
+    ...
+    "tocDepth": 2,
+    ...
+}
+</code></pre>
+<p>This value is honored at all levels of <code>bookdown.json</code> files.</p>
 
 <nav class="navfooter">
     <table>

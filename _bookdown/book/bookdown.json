@@ -7,5 +7,6 @@
         "development.md"
     ],
     "template": "../templates/main.php",
-    "target": "../../"
+    "target": "../../",
+    "tocDepth": 2
 }
