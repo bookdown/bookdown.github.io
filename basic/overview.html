@@ -67,7 +67,18 @@
     "content": [
         "page.md",
         "section/bookdown.json"
-    ]
+    ],
+    "target": "./html",
+    "template": "[path to Composer vendor]/myname/bookdown-templates/templates/main.php",
+    "rootHref": "http://example.com/",
+    "tocDepth": 2,
+    "copyright": "Copyright (c) 2016 &lt;a href=\"http://bookdown.io/\"&gt;Bokdown.io&lt;/a&gt;",
+    "extensions": {
+      "commonmark": [
+        "Webuni\\CommonMark\\TableExtension\\TableExtension",
+        "Webuni\\CommonMark\\AttributesExtension\\AttributesExtension"
+      ]
+    }
 }
 </code></pre>
 <blockquote>
@@ -122,7 +133,25 @@
     ]
 }
 </code></pre>
-<h4 id="2.1.2.2.3">2.1.2.2.3. No <code>"index"</code> Content Names</h4>
+<h4 id="2.1.2.2.3">2.1.2.2.3. Target String</h4>
+<p>The <code>"target"</code> string determines the folder where to store the generated HTML files.</p>
+<h4 id="2.1.2.2.4">2.1.2.2.4. Template String</h4>
+<p>The <code>"template"</code> string determines the path to main file of a 3rd party template which is installed via Composer for
+example. Please refer to the Advanced Topics section for more details.</p>
+<h4 id="2.1.2.2.5">2.1.2.2.5. RootHref String</h4>
+<p>The <code>"rootHref"</code> string is used to generate the full URL of the page links. This can be <code>/</code> or 'http://example.com/' for example.</p>
+<h4 id="2.1.2.2.6">2.1.2.2.6. TocDepth String</h4>
+<p>The <code>"tocDepth"</code> string determines the depth of the table of contents. A value of 1 means that only H1 headings are displayed.
+The value 2 means that only H1 and H2 headings are displayed and so on. Value 0 means all headings will be displayed, this is the default value.</p>
+<h4 id="2.1.2.2.7">2.1.2.2.7. Copyright String</h4>
+<p>The <code>"copyright"</code> string is used in the footer to display the copyright of the documentation. HTML is allowed.</p>
+<h4 id="2.1.2.2.8">2.1.2.2.8. Extensions Array</h4>
+<p>The extensions array is used to extend the default Markdown parsing process with plugins. Actually only CommonMark extensions are supported.
+Please ensure that the extension classes are available via Composer autoloading.</p>
+<h5 id="2.1.2.2.8.1">2.1.2.2.8.1. CommonMark Extensions</h5>
+<p>The <code>"commonmark"</code> array is a list of CommonMark extension classes. All CommonMark extensions are supported which can be
+instantiated without any dependencies. The entry must be a FCQN of the extension class.</p>
+<h4 id="2.1.2.2.9">2.1.2.2.9. No <code>"index"</code> Content Names</h4>
 <p>The target name <code>index</code> is reserved by Bookdown for table-of-contents pages. If you have an origin that will end up with an <code>index</code> target name, use a <code>"content"</code> object to rename it to something else.</p>
 
 <nav class="navfooter">
