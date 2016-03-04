@@ -2,6 +2,7 @@
     "title": "Advanced Topics",
     "content": [
         "remote.md",
+        "settings.md",
         "styles.md",
         "templates.md",
         "page-entity.md"

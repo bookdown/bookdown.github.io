@@ -3,7 +3,7 @@
     <!-- Basic Page Needs
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta charset="utf-8">
-    <title>Development</title>
+    <title>Settings</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -47,31 +47,48 @@
 <nav class="navheader">
     <table>
         <tr>
-            <th colspan="3" class="curr">4. Development</th>
+            <th colspan="3" class="curr">3.2. Settings</th>
         </tr>
         <tr>
-            <td class="prev"><a href="/advanced/page-entity.html">The Page Entity</a></td>
-            <td class="parent">Bookdown 1.x</th>
-            <td class="next"></td>
+            <td class="prev"><a href="/advanced/remote.html">Remote Content</a></td>
+            <td class="parent">3. Advanced Topics</th>
+            <td class="next"><a href="/advanced/styles.html">Adding CSS Files</a></td>
         </tr>
     </table>
 </nav>
-<h1 id="4">4. Development</h1>
-<p>Bookdown needs your help! As a new project, we are eager to bring in contributors who are interested in DocBook-like documentation, but without the heavy toolchain and XML of DocBook itself.</p>
-<p>If you are a developer, you can clone or fork the <a href="https://github.com/bookdown/Bookdown.Bookdown">core library repository</a> from Github. We plan to use the <a href="https://github.com/bookdown/Bookdown.Bookdown/issues">Issues</a> as the main means of community communication. <a href="https://github.com/bookdown/Bookdown.Bookdown/pulls">Pull Requests</a> especially are appreciated, particularly for items on <a href="https://github.com/bookdown/Bookdown.Bookdown#todo">the Todo list</a>.</p>
-<p>If you are a designer, you can already tell that we are design-challenged. It would be awesome if we could provide a good-looking stylesheet out-of-the-box for the <a href="https://github.com/bookdown/Bookdown.Project">Bookdown project skeleton</a>.  In addition, we are interested in figuring out a way to provide Composer-deliverable themes for Bookdown, so that other design-challenged developers can make their work look good.</p>
+<h1 id="3.2">3.2. Settings</h1>
+<h2 id="3.2.1">3.2.1. rootHref</h2>
+<p>By default, all navgation links between pages will be prefixed with <code>/</code>. Sometimes this will not be what you want; for example, if you are publishing your book to a subdirectory.</p>
+<p>If you want to use a different root href value, edit the top-level <code>bookdown.json</code> file and set the <code>rootHref</code> value:</p>
+<pre><code>{
+    ...
+    "rootHref": "/foo/",
+    ...
+}
+</code></pre>
+<p>Then all navigation links will be prefixed with <code>/foo/</code> instead.</p>
+<p>This value is honored only at the root-level <code>bookdown.json</code> file.</p>
+<h2 id="3.2.2">3.2.2. tocDepth</h2>
+<p>By default, the table of contents will show all content levels below it. You can limit the depth of the table of contents by setting the <code>tocDepth</code> value:</p>
+<pre><code>{
+    ...
+    "tocDepth": 2,
+    ...
+}
+</code></pre>
+<p>This value is honored at all levels of <code>bookdown.json</code> files.</p>
 
 <nav class="navfooter">
     <table>
         <tr>
-            <td class="prev"><a href="/advanced/page-entity.html">Prev</a></td>
-            <td class="parent"><a href="/">Up</a></td>
-            <td class="next"></td>
+            <td class="prev"><a href="/advanced/remote.html">Prev</a></td>
+            <td class="parent"><a href="/advanced/">Up</a></td>
+            <td class="next"><a href="/advanced/styles.html">Next</a></td>
         </tr>
         <tr>
-            <td class="prev">3.5. The Page Entity</td>
-            <td class="parent">Bookdown 1.x</td>
-            <td class="next"></td>
+            <td class="prev">3.1. Remote Content</td>
+            <td class="parent">3. Advanced Topics</td>
+            <td class="next">3.3. Adding CSS Files</td>
         </tr>
     </table>
 </nav>

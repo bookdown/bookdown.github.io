@@ -1,5 +1,5 @@
 {
-    "title": "Bookdown 0.5.0",
+    "title": "Bookdown 1.x",
     "content": [
         "intro/bookdown.json",
         "basic/bookdown.json",
@@ -7,5 +7,6 @@
         "development.md"
     ],
     "template": "../templates/main.php",
-    "target": "../../"
+    "target": "../../",
+    "tocDepth": 2
 }
