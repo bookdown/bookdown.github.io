@@ -56,11 +56,11 @@
         </tr>
     </table>
 </nav>
-<h1 id="2.3">2.3. Generating HTML</h1>
+<div id="section-main"><h1 id="2-3">2.3. Generating HTML</h1>
 <p>Now that we have added some content, let's re-generate the HTML files.</p>
-<h2 id="2.3.1">2.3.1. Setting The Target</h2>
+<h2 id="2-3-1">2.3.1. Setting The Target</h2>
 <p>The top-level <code>bookdown.json</code> file has a <code>"target"</code> element that specified where the generated HTML should be saved.  By default, this is the relative path <code>../../</code>, meaning the root of our <code>{$REPO}</code> directory. If you like, you can change this to some other target directory.</p>
-<h2 id="2.3.2">2.3.2. The <code>bookdown</code> Command</h2>
+<h2 id="2-3-2">2.3.2. The <code>bookdown</code> Command</h2>
 <p>Now we can actually generate the HTML output from our Markdown content. We do so by calling the <code>bookdown</code> command and passing it the path to our top-level <code>bookdown.json</code> config file. (Remember that <code>{$REPO}</code> is our root repository directory.)</p>
 <pre><code>cd {$REPO}/_bookdown
 ./vendor/bin/bookdown book/bookdown.json
@@ -84,16 +84,16 @@
 <p>Added previous/next/up navigation on each page</p>
 </li>
 </ul>
-<h2 id="2.3.3">2.3.3. Overriding The Target Value</h2>
+<h2 id="2-3-3">2.3.3. Overriding The Target Value</h2>
 <p>In some cases, you may find it necessary to temporarily override the <code>target</code> value from the top-level <code>bookdown.json</code> file. To do so, you can specify <code>--target=</code> when invoking the <code>bookdown</code> command:</p>
 <pre><code>./vendor/bin/bookdown book/bookdown.json --target=../../other-dir/
 </code></pre>
-<h2 id="2.3.4">2.3.4. Overriding The RootHref Value</h2>
+<h2 id="2-3-4">2.3.4. Overriding The RootHref Value</h2>
 <p>In some cases you may find it useful to override the <code>root-href</code> value from the top-level <code>bookdown.json</code> file.
 To do so, you can specify <code>--root-href=</code> when invoking the <code>bookdown</code> command:</p>
 <pre><code>./vendor/bin/bookdown book/bookdown.json --root-href=http://example.com
 </code></pre>
-
+</div>
 <nav class="navfooter">
     <table>
         <tr>

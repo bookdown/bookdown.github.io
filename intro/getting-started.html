@@ -56,19 +56,19 @@
         </tr>
     </table>
 </nav>
-<h1 id="1.2">1.2. Getting Started</h1>
-<h2 id="1.2.1">1.2.1. Prerequisites</h2>
-<p>Bookdown uses <a href="http://php.net">PHP</a>. It runs on PHP 5.4, but we recommend using the latest available version.</p>
-<h2 id="1.2.2">1.2.2. Installation</h2>
+<div id="section-main"><h1 id="1-2">1.2. Getting Started</h1>
+<h2 id="1-2-1">1.2.1. Prerequisites</h2>
+<p>Bookdown uses <a href="http://php.net">PHP</a>. It runs on PHP 5.6 and later, but we recommend using the latest available version of PHP.</p>
+<h2 id="1-2-2">1.2.2. Installation</h2>
 <p>First, choose an existing project directory, likely a Git repository. We will call this the <code>{$REPO}</code> directory.</p>
 <p>Next, use <a href="http://getcomposer.org">Composer</a> to install a Bookdown skeleton as a subdirectory inside <code>{$REPO}</code>. We suggest <code>_bookdown/</code> since Github Pages will not publish underscore-prefixed paths.</p>
 <pre><code>cd {$REPO}
-composer create-project -s dev bookdown/project _bookdown/
+composer create-project bookdown/project _bookdown/
 </code></pre>
 <p>You may wish to add the following lines to <code>{$REPO}/.gitignore</code> so that the underlying libraries are not committed to your main repository.</p>
 <pre><code>/_bookdown/vendor
 </code></pre>
-<h2 id="1.2.3">1.2.3. Confirming Installation</h2>
+<h2 id="1-2-3">1.2.3. Confirming Installation</h2>
 <p>The Bookdown skeleton includes an example to confirm that installation succeeded.  Change into the skeleton directory, then issue the <code>bookdown</code> command to generate the example files:</p>
 <pre><code>cd _bookdown/
 ./vendor/bin/bookdown book/bookdown.json
@@ -78,7 +78,7 @@ composer create-project -s dev bookdown/project _bookdown/
 <pre><code>php -S localhost:8080 -t {$REPO}
 </code></pre>
 <p>Be sure to terminate the server when done.</p>
-
+</div>
 <nav class="navfooter">
     <table>
         <tr>

@@ -56,8 +56,8 @@
         </tr>
     </table>
 </nav>
-<h1 id="2.2">2.2. Adding Content</h1>
-<h2 id="2.2.1">2.2.1. Local Page Files</h2>
+<div id="section-main"><h1 id="2-2">2.2. Adding Content</h1>
+<h2 id="2-2-1">2.2.1. Local Page Files</h2>
 <p>Let's add a page to the existing example book. Use your favorite editor to create a file called <code>new-page.md</code> at <code>{$REPO}/_bookdown/book</code>. Add the following text to that file, and save when done:</p>
 <pre><code># My New Page
 
@@ -74,9 +74,9 @@ The quick brown fox jumps over the lazy dog.
     },
 </code></pre>
 <p>Note that the Markdown file name does not have to match the HTML file name that will be generated.  The <code>new-page.md</code> file will be transformed into <code>another.html</code> at generation time.</p>
-<h2 id="2.2.2">2.2.2. Hierarchical Content</h2>
+<h2 id="2-2-2">2.2.2. Hierarchical Content</h2>
 <p>In addition, you can specify another <code>bookdown.json</code> config file as a <code>"content"</code> element. When you do so, Bookdown will read that config file and treat its content as pages in a subsection. This allows you to structure books of any depth you like. For an example, review <a href="https://github.com/bookdown/bookdown.github.io/tree/master/_bookdown/book">the files that produce this very site</a>.</p>
-
+</div>
 <nav class="navfooter">
     <table>
         <tr>

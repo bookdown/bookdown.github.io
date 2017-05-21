@@ -56,11 +56,11 @@
         </tr>
     </table>
 </nav>
-<h1 id="2.1">2.1. Overview</h1>
+<div id="section-main"><h1 id="2-1">2.1. Overview</h1>
 <p>Now that we have a working Bookdown installation, let's create some content and generate HTML from it. We need to deal with two things: our actual Markdown content files, and a <code>bookdown.json</code> config file to organize them.</p>
-<h2 id="2.1.1">2.1.1. Markdown Content Files</h2>
+<h2 id="2-1-1">2.1.1. Markdown Content Files</h2>
 <p>Bookdown uses <a href="http://commonmark.org">CommonMark</a> Markdown as its default markup. (Advanced users may write other conversion processes to use other markups.)  This means that standard Markdown content is already suitable for use with Bookdown.</p>
-<h2 id="2.1.2">2.1.2. The <code>bookdown.json</code> Config File</h2>
+<h2 id="2-1-2">2.1.2. The <code>bookdown.json</code> Config File</h2>
 <p>The <code>bookdown.json</code> config file controls the title of our table-of-contents index page, and the content to be used for HTML generation. A <code>bookdown.json</code> config file looks like this:</p>
 <pre><code>{
     "title": "My Title",
@@ -84,11 +84,11 @@
 <blockquote>
 <p>N.b.: The top-level <code>bookdown.json</code> has other elements that control book generation; we can ignore these for now.</p>
 </blockquote>
-<h3 id="2.1.2.1">2.1.2.1. Title String</h3>
+<h3 id="2-1-2-1">2.1.2.1. Title String</h3>
 <p>The <code>"title"</code> string determines the heading that will be used for the table-of-contents entry for the listed content.</p>
-<h3 id="2.1.2.2">2.1.2.2. Content Array</h3>
+<h3 id="2-1-2-2">2.1.2.2. Content Array</h3>
 <p>The <code>"content"</code> array specifies the order of pages, and the origins of those pages.</p>
-<h4 id="2.1.2.2.1">2.1.2.2.1. Content String Elements</h4>
+<h4 id="2-1-2-2-1">2.1.2.2.1. Content String Elements</h4>
 <p>Each content array element is an origin string. It determines both where the content is located, and the target name when rendering it into HTML.</p>
 <ul>
 <li>
@@ -113,7 +113,7 @@
 <blockquote>
 <p>N.b.: The use of remote paths makes it possible to collect content from many different sources into a single book.</p>
 </blockquote>
-<h4 id="2.1.2.2.2">2.1.2.2.2. Content Object Elements</h4>
+<h4 id="2-1-2-2-2">2.1.2.2.2. Content Object Elements</h4>
 <p>Sometimes you will want the target name to be different from the origin name. In these cases, the <code>"content"</code> element can be an object of a single key-value pair, where the key is the target name and the value is the origin.</p>
 <p>The following is equivalent to the above:</p>
 <pre><code>{
@@ -133,27 +133,27 @@
     ]
 }
 </code></pre>
-<h4 id="2.1.2.2.3">2.1.2.2.3. Target String</h4>
+<h4 id="2-1-2-2-3">2.1.2.2.3. Target String</h4>
 <p>The <code>"target"</code> string determines the folder where to store the generated HTML files.</p>
-<h4 id="2.1.2.2.4">2.1.2.2.4. Template String</h4>
+<h4 id="2-1-2-2-4">2.1.2.2.4. Template String</h4>
 <p>The <code>"template"</code> string determines the path to main file of a 3rd party template which is installed via Composer for
 example. Please refer to the Advanced Topics section for more details.</p>
-<h4 id="2.1.2.2.5">2.1.2.2.5. RootHref String</h4>
+<h4 id="2-1-2-2-5">2.1.2.2.5. RootHref String</h4>
 <p>The <code>"rootHref"</code> string is used to generate the full URL of the page links. This can be <code>/</code> or 'http://example.com/' for example.</p>
-<h4 id="2.1.2.2.6">2.1.2.2.6. TocDepth String</h4>
+<h4 id="2-1-2-2-6">2.1.2.2.6. TocDepth String</h4>
 <p>The <code>"tocDepth"</code> string determines the depth of the table of contents. A value of 1 means that only H1 headings are displayed.
 The value 2 means that only H1 and H2 headings are displayed and so on. Value 0 means all headings will be displayed, this is the default value.</p>
-<h4 id="2.1.2.2.7">2.1.2.2.7. Copyright String</h4>
+<h4 id="2-1-2-2-7">2.1.2.2.7. Copyright String</h4>
 <p>The <code>"copyright"</code> string is used in the footer to display the copyright of the documentation. HTML is allowed.</p>
-<h4 id="2.1.2.2.8">2.1.2.2.8. Extensions Array</h4>
+<h4 id="2-1-2-2-8">2.1.2.2.8. Extensions Array</h4>
 <p>The extensions array is used to extend the default Markdown parsing process with plugins. Actually only CommonMark extensions are supported.
 Please ensure that the extension classes are available via Composer autoloading.</p>
-<h5 id="2.1.2.2.8.1">2.1.2.2.8.1. CommonMark Extensions</h5>
+<h5 id="2-1-2-2-8-1">2.1.2.2.8.1. CommonMark Extensions</h5>
 <p>The <code>"commonmark"</code> array is a list of CommonMark extension classes. All CommonMark extensions are supported which can be
 instantiated without any dependencies. The entry must be a FCQN of the extension class.</p>
-<h4 id="2.1.2.2.9">2.1.2.2.9. No <code>"index"</code> Content Names</h4>
+<h4 id="2-1-2-2-9">2.1.2.2.9. No <code>"index"</code> Content Names</h4>
 <p>The target name <code>index</code> is reserved by Bookdown for table-of-contents pages. If you have an origin that will end up with an <code>index</code> target name, use a <code>"content"</code> object to rename it to something else.</p>
-
+</div>
 <nav class="navfooter">
     <table>
         <tr>

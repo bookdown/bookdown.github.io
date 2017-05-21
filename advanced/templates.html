@@ -56,10 +56,10 @@
         </tr>
     </table>
 </nav>
-<h1 id="3.4">3.4. Rendering</h1>
+<div id="section-main"><h1 id="3-4">3.4. Rendering</h1>
 <p>Bookdown runs plain-PHP templates through <a href="https://github.com/auraphp/Aura.View">Aura.View</a>, using <a href="https://github.com/auraphp/Aura.Html">Aura.Html</a> helpers, to render HTML pages.</p>
 <p>The default templates are located in the core Bookdown library; you can see them at <code>{$REPO}/_bookdown/vendor/bookdown/bookdown/templates/</code>. The project-specific override templates are located in the <code>{$REPO}/_bookdown/templates</code> directory.</p>
-<h2 id="3.4.1">3.4.1. Overriding The Default Templates</h2>
+<h2 id="3-4-1">3.4.1. Overriding The Default Templates</h2>
 <p>You can override the default templates individiually or entirely to control Bookdown output. To do so:</p>
 <ol>
 <li>
@@ -89,7 +89,7 @@ cp vendor/bookdown/templates/navheader.php templates/navheader.php
 <p>(Note that <code>$library</code> and <code>$project</code> are defined at the top of <code>main.php</code>.)</p>
 <p>Then we edit the <code>navheader.php</code> template and change it to whatever we like. Try something obvious, like replacing all the HTML and PHP code with <code>&lt;p&gt;HI THERE&lt;/p&gt;</code>.</p>
 <p>Finally, regenerate the HTML. You should see <code>HI THERE</code> at the top of every page, but no navigation elements at all.</p>
-<h2 id="3.4.2">3.4.2. Choosing A Different Master Template</h2>
+<h2 id="3-4-2">3.4.2. Choosing A Different Master Template</h2>
 <p>If you like, you can point Bookdown to a completely different master template. In the root <code>bookdown.json</code> config file, specify a <code>"template"</code> value as the path to your new master PHP template:</p>
 <pre><code>{
     ...
@@ -98,11 +98,11 @@ cp vendor/bookdown/templates/navheader.php templates/navheader.php
 </code></pre>
 <p>That template will be passed through an Aura.View instance.</p>
 <p>You can also completely rewrite the existing <code>templates/main.php</code> template to whatever you like.</p>
-<h2 id="3.4.3">3.4.3. Overriding The Template Value</h2>
+<h2 id="3-4-3">3.4.3. Overriding The Template Value</h2>
 <p>In some cases, you may find it necessary to temporarily override the <code>template</code> value from the top-level <code>bookdown.json</code> file. To do so, you can specify <code>--template=</code> when invoking the <code>bookdown</code> command:</p>
 <pre><code>./vendor/bin/bookdown book/bookdown.json --template=../../other-template.php
 </code></pre>
-
+</div>
 <nav class="navfooter">
     <table>
         <tr>
