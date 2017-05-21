@@ -1,6 +1,6 @@
 # Development
 
-Bookdown needs your help! As a new project, we are eager to bring in contributors who are interested in DocBook-like documentation, but without the heavy toolchain and XML of DocBook itself.
+Bookdown needs your help! We are eager to bring in contributors who are interested in DocBook-like documentation, but without the heavy toolchain and XML of DocBook itself.
 
 If you are a developer, you can clone or fork the [core library repository](https://github.com/bookdown/Bookdown.Bookdown) from Github. We plan to use the [Issues](https://github.com/bookdown/Bookdown.Bookdown/issues) as the main means of community communication. [Pull Requests](https://github.com/bookdown/Bookdown.Bookdown/pulls) especially are appreciated, particularly for items on [the Todo list](https://github.com/bookdown/Bookdown.Bookdown#todo).
 
