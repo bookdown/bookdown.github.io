@@ -82,6 +82,10 @@ The key (target name) can be any name you like, so the following uses the same o
         ]
     }
 
+#### No `"index"` Content Names
+
+The target name `index` is reserved by Bookdown for table-of-contents pages. If you have an origin that will end up with an `index` target name, use a `"content"` object to rename it to something else.
+
 ### Target String
 
 The `"target"` string determines the folder where to store the generated HTML files.
@@ -113,7 +117,3 @@ Please ensure that the extension classes are available via Composer autoloading.
 
 The `"commonmark"` array is a list of CommonMark extension classes. All CommonMark extensions are supported which can be
 instantiated without any dependencies. The entry must be a FCQN of the extension class.
-
-### No `"index"` Content Names
-
-The target name `index` is reserved by Bookdown for table-of-contents pages. If you have an origin that will end up with an `index` target name, use a `"content"` object to rename it to something else.
