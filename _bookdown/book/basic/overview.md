@@ -82,38 +82,38 @@ The key (target name) can be any name you like, so the following uses the same o
         ]
     }
 
-#### Target String
+### Target String
 
 The `"target"` string determines the folder where to store the generated HTML files.
 
-#### Template String
+### Template String
 
-The `"template"` string determines the path to main file of a 3rd party template which is installed via Composer for 
+The `"template"` string determines the path to main file of a 3rd party template which is installed via Composer for
 example. Please refer to the Advanced Topics section for more details.
 
-#### RootHref String
+### RootHref String
 
 The `"rootHref"` string is used to generate the full URL of the page links. This can be `/` or 'http://example.com/' for example.
 
-#### TocDepth String
+### TocDepth String
 
-The `"tocDepth"` string determines the depth of the table of contents. A value of 1 means that only H1 headings are displayed. 
-The value 2 means that only H1 and H2 headings are displayed and so on. Value 0 means all headings will be displayed, this is the default value. 
+The `"tocDepth"` string determines the depth of the table of contents. A value of 1 means that only H1 headings are displayed.
+The value 2 means that only H1 and H2 headings are displayed and so on. Value 0 means all headings will be displayed, this is the default value.
 
-#### Copyright String
+### Copyright String
 
 The `"copyright"` string is used in the footer to display the copyright of the documentation. HTML is allowed.
 
-#### Extensions Array
+### Extensions Array
 
 The extensions array is used to extend the default Markdown parsing process with plugins. Actually only CommonMark extensions are supported.
 Please ensure that the extension classes are available via Composer autoloading.
 
-##### CommonMark Extensions
+#### CommonMark Extensions
 
-The `"commonmark"` array is a list of CommonMark extension classes. All CommonMark extensions are supported which can be 
+The `"commonmark"` array is a list of CommonMark extension classes. All CommonMark extensions are supported which can be
 instantiated without any dependencies. The entry must be a FCQN of the extension class.
 
-#### No `"index"` Content Names
+### No `"index"` Content Names
 
 The target name `index` is reserved by Bookdown for table-of-contents pages. If you have an origin that will end up with an `index` target name, use a `"content"` object to rename it to something else.
