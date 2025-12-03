@@ -23,7 +23,7 @@ Next, copy the following stylesheet to the `css/` subdirectory as `style.css`:
         font-family: sans-serif;
     }
 
-Then edit the `{$REPO}/_bookdown/templates/head.php` [override template](./templates.html) file to add a link to the stylesheet.
+Then edit the `{$REPO}/_bookdown/templates/head.php` [override template](./templates.md) file to add a link to the stylesheet.
 
 The file will end up looking something like this:
 
